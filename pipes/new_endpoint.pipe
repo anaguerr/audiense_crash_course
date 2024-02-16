@@ -1,0 +1,7 @@
+TOKEN "new_endpoint_endpoint_read_1373" READ
+
+NODE new_endpoint_0
+SQL >
+    SELECT day, countMerge(c) as c, avgMerge(avg_distance) as avg_distance
+    FROM exercise_ms_0_mv
+    group by day

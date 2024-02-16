@@ -1,0 +1,7 @@
+TOKEN "test_3_endpoint_read_4372" READ
+
+NODE test_3_0
+SQL >
+    SELECT toStartOfDay(tpep_pickup_datetime) AS day, count() AS c, avg(trip_distance) AS avg_distance
+    FROM yellow_tripdata_sorting_key_exercise
+    GROUP BY day

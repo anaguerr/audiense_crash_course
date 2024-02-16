@@ -1,0 +1,11 @@
+NODE exercise_ms_0
+SQL >
+    SELECT
+        toStartOfDay(tpep_pickup_datetime) AS day,
+        countState() AS c,
+        avgState(trip_distance) AS avg_distance
+    FROM yellow_tripdata_sorting_key_exercise
+    GROUP BY day
+
+TYPE MATERIALIZED
+DATASOURCE exercise_ms_0_mv
