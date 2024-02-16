@@ -1,0 +1,13 @@
+TOKEN "read_token" READ
+
+NODE first_node
+SQL >
+    SELECT toStartOfHour(tpep_pickup_datetime) as day, count() as c
+    from yellow_tripdata_2018_01_1
+    group by day
+    order by day asc
+
+NODE endpoint
+SQL >
+    %
+    SELECT * FROM first_node where day > {{ DateTime(date, '2018-01-01 00:00:00') }}

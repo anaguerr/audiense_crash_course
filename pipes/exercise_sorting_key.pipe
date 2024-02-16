@@ -1,0 +1,19 @@
+TOKEN "exercise_sorting_key_endpoint_read_1676" READ
+
+NODE exercise_sorting_key_0
+SQL >
+    SELECT *  -- order by tpep_pickup_datetime desc
+    FROM yellow_tripdata_sorting_key_exercise
+    where toStartOfDay(tpep_pickup_datetime) = '2018-07-27'
+
+NODE exercise_sorting_key_1
+SQL >
+    SELECT * FROM yellow_tripdata_sorting_key_exercise where trip_distance between 1 and 2
+
+NODE exercise_sorting_key_2
+SQL >
+    SELECT count() FROM exercise_sorting_key_1
+
+NODE exercise_sorting_key_3
+SQL >
+    SELECT count() FROM exercise_sorting_key_0

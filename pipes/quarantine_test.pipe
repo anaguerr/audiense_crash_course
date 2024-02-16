@@ -1,0 +1,3 @@
+NODE quarantine_test_0
+SQL >
+    SELECT vendorid FROM yellow_tripdata_2018_01_quarantine
