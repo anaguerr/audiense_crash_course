@@ -8,7 +8,7 @@ SQL >
 
 NODE exercise_sorting_key_1
 SQL >
-    SELECT * FROM yellow_tripdata_sorting_key_exercise where trip_distance between 1 and 2
+    SELECT * FROM yellow_tripdata_sorting_key_exercise where trip_distance = 1
 
 NODE exercise_sorting_key_2
 SQL >
